@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("../assets/homepage-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-center {
+  position:relative;
+  top: 0;
+  height: 578px;
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.slogan {
+  width: 800px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 54px;
+  pointer-events: none;
+  user-select: none;
+  margin-top: 98px;
+  padding-bottom: 20px;
+}
+
+.logo-small {
+  position: absolute;
+  background: #fff;
+  width:4.5%;
+  bottom: 58px;
+  left: 61px;
+  border: 4px solid #fff;
+  border-radius: 80px;
+}
+
+.partner-container {
+  height: 120px;
+  width:500px;
+  margin-top: 30px;
+  position:relative;
+  bottom: 50px;
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+
+}
+
+.ninjatrader-partner  {
+  position: absolute;
+  left: 40px;
+}
+
+.apex-partner {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+}
+
+
+.vl {
+  position: absolute;
+  border-left: 3px solid #a214eeaf;
+  border-radius: 2px;
+  height: 46px;
+  user-select: none;
+  top: 50px;
+  right: 160px;
+}
+

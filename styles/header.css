@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px 60px;
+  height: 120px;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content:space-between;
+  z-index: 100;
+  background: url(../assets/header.png);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.title {
+  letter-spacing: 4px;
+  color:white;
+  font-weight: bold;
+  padding-right: 98px;
+  font-size: 46px;
+  cursor: pointer;
+  user-select: none;
+
+}
+
+.tradeverse-home-link {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 20px;
+  font-weight: 100;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  user-select: none;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.button-login {
+  vertical-align: top;
+  font-size: 28px;
+  background-color: white;
+  color: #8C07DD;
+  font-weight: bold;
+  border: none;
+  padding-left: 46px;
+  padding-right: 46px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 33px;
+  box-shadow: 0px 0px 62px rgba(0,0,0,.3);
+  margin-right: 22px;
+  margin-bottom: 22px;
+  margin-top: 18px;
+  cursor: pointer;
+  transition: border-radius .15s,
+              font-size .15s,
+              margin .15s,
+              padding .15s;
+}
+
+.navigation .button-login:hover {
+  border-radius: 37px;
+  font-size: 30px;
+  margin-right: 18px;
+  padding-left: 44px;
+}
+
+.navigation .button-signup {
+  margin-top: 18px;
+  font-size: 28px;
+  background-color: #8C07DD;
+  color: white;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  padding-left: 44px;
+  padding-right: 44px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 33px;
+  box-shadow: 0px 0px 62px rgba(0,0,0,.3);
+  cursor: pointer;
+  transition: border-radius .15s,
+              font-size .15s,
+              margin .15s;  
+}
+
+.navigation .button-signup:hover {
+  border-radius: 37px;
+  font-size: 30px;
+  margin-left: -8px;
+}
+

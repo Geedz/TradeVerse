@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html style="font-family: Poppins" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Log in
+    </title>
+    <link href="styles/general.css" rel="stylesheet">
+    <link href="styles/login.css" rel="stylesheet">
+    <link href="styles/login-header.css" rel="stylesheet">
+  </head>
+  <body style="margin: 0;">
+    <header>
+      <a href="home.html">
+        <img src="assets/tradeverse-gradient.png" alt="TradeVerse with Gradient" class="tradeverse-topleft-login">
+      </a>
+      <nav class="navigation">
+        <a href="team.html">Team</a>
+        <a href="contattaci.html">Contattaci</a>
+        <a href="chi-siamo.html">Chi Siamo</a>
+      </nav>
+    </header>
+    <nav class="navigation-bottom">
+      <a class="navigation-bottom-password" href="password-forgot.html">Ti sei dimenticato la password?</a>
+    </nav>  
+    <main class="login-center">
+      <img class="logo-scritta" src="assets/logo.png">
+      <div class="wrapper">
+        <div class="form-box login">
+          <h2>
+            Log in
+          </h2>
+          <form action="form-details.txt" method="post">
+            <div class="input-box">
+              <input id="userfield" name="userfield" class="input-field" 
+                    type="email" required 
+                    placeholder="Email"
+                    autocomplete="on">
+
+              <label for="userfield">Email</label>
+            </div>
+            <div class="input-box">
+              <input id="passfield" name="passfield" class="input-field" type="password" required minlength="6" placeholder="Password">
+              <label for="passfield">Password</label>
+            </div>
+            <div class="btn-remember">
+              <button type="submit" class="login-submit-form">
+                LOG IN
+              </button>  
+              <div class="remember-me-container">
+                <label for="remember-me">
+                  <input id="remember-me" 
+                        name="remember-me" 
+                        class="remember-me-field" 
+                        type="checkbox">
+                  Ricordami
+                </label>  
+              </div>
+            </div>
+            <div class="remember-forgot">
+            </div>
+          </form>    
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

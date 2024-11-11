@@ -1,0 +1,49 @@
+.login-header {
+  display: flex;
+  flex-direction: row;
+  height: 120px;
+  justify-content: space-between;
+}
+
+.header-right {
+  font-size:22px;
+  color: #ffffff;
+  padding-top: 16px;
+  max-width: 920px;
+  min-width: 200px;
+  margin-top: 0px;
+  margin-right: 40px;
+  width: 500px;
+  text-align: end;
+}
+
+.header-menu {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-menu:hover {
+  text-decoration: underline;
+}
+
+.header-team {
+  padding-right: 38px;
+}
+
+.header-contattaci {
+  padding-right: 38px;
+}
+
+.tradeverse-gradient {
+  vertical-align: middle;
+  margin-top: 30px;
+  margin-left: 30px;
+  color:white;
+  font-weight: bold;
+  font-size: 46px;
+  user-select: none;
+}
+
+
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html style="font-family: Poppins" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles/header.css" rel="stylesheet">
+    <link href="styles/general.css" rel="stylesheet">
+    <link href="styles/contattaci.css" rel="stylesheet">
+    <title>Contattaci</title>
+  </head>
+  <body>
+    <header style="box-shadow: 0px 0px 62px rgba(0, 0, 0,.6);">
+      <h2 class="title"><a class="tradeverse-home-link"href="home.html" target="_self">TradeVerse</a></h2>
+      <nav class="navigation">
+        <a href="team.html">Team</a>
+        <a href="contattaci.html">Contattaci</a>
+        <a href="chi-siamo.html">Chi Siamo</a>
+      </nav>
+      <nav class="navigation">
+        <button onclick="location.href='login.html'; " type="button" class="button-login">
+          LOG IN
+        </button>
+        <button onclick="location.href='signup.html'; " type="button" class="button-signup">
+          SIGN UP
+        </button>
+      </nav>
+    </header>
+    <main class="contact-center">
+      <div class="wrapper">
+        <div class="form-box contact">
+          <h2>
+            Contattaci
+          </h2>
+          <form action="form-details.txt" method="post">
+            <div class="short-input-container">
+              <div class="input-box-short">
+                <input id="namefield" name="namefield" class="input-field-short" 
+                      type="text" required 
+                      placeholder="Nome*">
+                <label for="namefield">Nome*</label>
+              </div>
+              <div class="input-box-short">
+                <input id="surnamefield" name="surnamefield" class="input-field-short" 
+                      type="text" required 
+                      placeholder="Cognome*">
+                <label for="surnamefield">Cognome*</label>
+              </div>  
+            </div>
+            <div class="input-box">
+              <input id="userfield" name="userfield" class="input-field" 
+                    type="email" required 
+                    placeholder="Email*"
+                    autocomplete="on">
+              <label for="userfield">Email*</label>
+            </div>
+            <div class="input-box">
+              <textarea id="contactfield" name="contactfield" class="input-field-contact" 
+                    type="text" required 
+                    placeholder="Descrivi il motivo per contattarci..."
+                    autocomplete="off"
+                    maxlength="200"
+                    minlength="20"></textarea>
+              <label for="contactfield">Descrivi il motivo per contattarci...</label>
+            </div>
+            <button type="submit" class="contact-submit-form">
+              INVIA
+            </button>  
+          </form>    
+        </div>
+      </div>
+      <div class="vl"></div>
+      <div class="our-contacts">
+        <div class="phone-mail-contacts">
+          <div class="contact-container">
+            <span class="icon"><ion-icon name="logo-whatsapp">
+            </ion-icon></span>
+            <h2>&#43;39 324 077 9550</h2>  
+          </div>
+          <div class="contact-container">
+            <span class="icon"><ion-icon name="mail-outline">
+            </ion-icon></span>         
+            <a href="mailto:tradeverseacademy@gmail.com" target="_blank">
+              <h2>tradeverseacademy@gmail.com</h2></a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html style="font-family: Poppins" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Sign up
+    </title>
+    <link href="styles/general.css" rel="stylesheet">
+    <link href="styles/signup.css" rel="stylesheet">
+    <link href="styles/signup-header.css" rel="stylesheet">
+  </head>
+  <body style="margin: 0;">
+    <header>
+      <a href="home.html">
+        <img src="assets/tradeverse-gradient.png" alt="TradeVerse with Gradient" class="tradeverse-topleft-login">
+      </a>
+    </header>
+    
+    <main class="signup-center">
+      <img class="logo-scritta" src="assets/logo.png">
+      <div class="wrapper">
+        <div class="form-box signup">
+          <h2>
+            Sign up
+          </h2>
+          <form action="form-details.txt" method="post">
+            <div class="short-input-container">
+              <div class="input-box-short">
+                <input id="namefield" name="namefield" class="input-field-short" 
+                      type="text" required 
+                      placeholder="Nome*">
+                <label for="namefield">Nome*</label>
+              </div>
+              <div class="input-box-short">
+                <input id="surnamefield" name="surnamefield" class="input-field-short" 
+                      type="text" required 
+                      placeholder="Cognome*">
+                <label for="surnamefield">Cognome*</label>
+              </div>  
+            </div>
+            <div class="input-box">
+              <input id="addressfield" name="addressfield" class="input-field" 
+                    type="text" required 
+                    placeholder="Indirizzo (Via/Viale, Numero Civico)*"
+                    autocomplete="on">
+              <label for="addressfield">Indirizzo (Via/Viale, Numero Civico)*</label>
+            </div>
+            <div class="short-input-container">
+              <div class="input-box-short">
+              <input id="capfield" name="capfield" class="input-field-short" 
+                    type="text" required 
+                    placeholder="CAP*"
+                    autocomplete="on">
+              <label for="capfield">CAP*</label>
+              </div>
+              <div class="input-box-short">
+                <input id="phonefield" name="phonefield" class="input-field-short" 
+                      type="number" required 
+                      placeholder="Telefono*"
+                      autocomplete="on">
+                <label for="phonefield">Telefono*</label>
+              </div>
+            </div>
+            <div class="input-box">
+              <input id="userfield" name="userfield" class="input-field" 
+                    type="email" required 
+                    placeholder="Email*"
+                    autocomplete="on">
+              <label for="userfield">Email*</label>
+            </div>
+            <div class="input-box">
+              <input id="passfield" name="passfield" class="input-field" type="password" required minlength="8" placeholder="Password*">
+              <label for="passfield">Password*</label>
+            </div>
+            <button type="submit" class="signup-submit-form">
+              SIGN UP
+            </button>  
+          </form>    
+        </div>
+      </div>
+      <nav class="navigation">
+        <a href="team.html">Team</a>
+        <a href="contattaci.html">Contattaci</a>
+        <a href="chi-siamo.html">Chi Siamo</a>
+      </nav>
+
+    </main>
+  </body>
+</html>
