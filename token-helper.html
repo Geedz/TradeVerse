@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Helper</title>
+</head>
+<body>
+    <script>
+        window.addEventListener('message', (event) => {
+            const allowedOrigins = [
+                "https://my.tradeverse.it",
+                "https://plans.tradeverse.it",
+                "https://admin.tradeverse.it"
+            ];
+
+            if (!allowedOrigins.includes(event.origin)) {
+                console.error("Unauthorized request from origin:", event.origin);
+                return;
+            }
+
+            if (event.data === 'getToken') {
+                const token = localStorage.getItem('jwt');
+                const current_plan = localStorage.getItem('current_plan');
+                event.source.postMessage({ token: token }, event.origin);
+                event.source.postMessage({ current_plan: current_plan }, event.origin);
+            }
+        });
+    </script>
+</body>
+</html>
