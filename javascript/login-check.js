@@ -26,6 +26,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
     if (data.message === "Login successful") {
 
       localStorage.setItem("jwt", data.token);
+      console.log(`token set ${data.token}`);
       localStorage.setItem("current_plan", data.current_plan);
       localStorage.removeItem('referralCode');
       
