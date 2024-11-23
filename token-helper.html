@@ -27,10 +27,24 @@
             }
 
             if (event.data === 'getToken') {
+                console.log(`Received request for token from: ${event.origin}`);
                 const token = localStorage.getItem('jwt');
                 const current_plan = localStorage.getItem('current_plan');
-                event.source.postMessage({ token: token }, event.origin);
-                event.source.postMessage({ current_plan: current_plan }, event.origin);
+                if (token) {
+                    console.log(`Found token: ${token}`);
+                    event.source.postMessage({ token: token }, event.origin);
+                } else {
+                    console.warn("No JWT found in localStorage");
+                    event.source.postMessage({ token: null }, event.origin);
+                }
+                if (current_plan) {
+                    console.log(`Found plan: ${current_plan}`);
+                    event.source.postMessage({ current_plan: current_plan }, event.origin);
+                } else {
+                    console.warn("No plan found in localStorage");
+                    event.source.postMessage({ current_plan: null }, event.origin);
+                }
+
             }
         });
     </script>
