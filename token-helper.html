@@ -10,8 +10,15 @@
         window.addEventListener('message', (event) => {
             const allowedOrigins = [
                 "https://my.tradeverse.it",
+                "https://my.tradeverse.it/",
+                "https://tradeverse.it",
+                "https://tradeverse.it/",
+                "https://www.tradeverse.it",
+                "https://www.tradeverse.it/",
                 "https://plans.tradeverse.it",
-                "https://admin.tradeverse.it"
+                "https://plans.tradeverse.it/",
+                "https://admin.tradeverse.it",
+                "https://admin.tradeverse.it/"
             ];
 
             if (!allowedOrigins.includes(event.origin)) {
