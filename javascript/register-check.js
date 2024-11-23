@@ -22,7 +22,7 @@ document.getElementById('registration-post').addEventListener('submit', async (e
   const referralCode = localStorage.getItem("referralCode") || null; 
 
   try {
-    const response = await fetch('http://localhost/tradeverse/backend/php/register.php', {
+    const response = await fetch('https://api.tradeverse.it/php/register.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

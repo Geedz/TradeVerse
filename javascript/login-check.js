@@ -6,7 +6,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
   const password = document.getElementById("passfield").value;
 
   try {
-    const response = await fetch('http://localhost/tradeverse/backend/php/login.php', {
+    const response = await fetch('https://api.tradeverse.it/php/login.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
       localStorage.setItem("current_plan", data.current_plan);
       localStorage.removeItem('referralCode');
       
-      window.location.href = "../personal-area/index.html";
+      window.location.href = "https://my.tradeverse.it/";
 
       errorMessageDiv.style.display = 'none';
       errorMessageDiv.textContent = '';
