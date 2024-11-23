@@ -1,0 +1,20 @@
+.no-plan-error {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  width: 50vw;
+  height: 40vh;
+  border-radius: 100px;
+  border: solid 2px #8c07dd;
+  box-shadow: 0 0 20px rgba(0,0,0,.4);
+  margin-bottom: 80px;
+}
+
+.no-plan-error h1 {
+  padding: 0 40px 0 40px;
+  letter-spacing: 1px;
+  font-size: 30px;
+  color: #8c07dd;
+  text-align: center;
+}

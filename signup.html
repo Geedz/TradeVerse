@@ -8,6 +8,7 @@
     <title>
       Sign up
     </title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png">
     <link href="styles/general.css" rel="stylesheet">
     <link href="styles/signup.css" rel="stylesheet">
     <link href="styles/signup-header.css" rel="stylesheet">
@@ -30,7 +31,7 @@
           <h2>
             Sign up
           </h2>
-          <form action="form-details.txt" method="post">
+          <form id="registration-post">
             <div class="short-input-container">
               <div class="input-box-short">
                 <input id="namefield" name="namefield" class="input-field-short" 
@@ -77,20 +78,27 @@
             </div>
             <div class="input-box">
               <input id="passfield" name="passfield" class="input-field" type="password" required minlength="8" placeholder="Password*">
+              <ion-icon class="eye-icon" id="pass-view" name="eye-outline"></ion-icon>
+              <ion-icon class="eye-icon" id="pass-noview" name="eye-off-outline" style="display: none;"></ion-icon>
               <label for="passfield">Password*</label>
             </div>
-            <button type="submit" class="signup-submit-form">
+            <button type="submit" id="register" class="signup-submit-form">
               SIGN UP
             </button>  
           </form>    
         </div>
       </div>
       <nav class="navigation">
+        <a href="login.html" class="login-redirect">Entra nel tuo account</a>
         <a href="team.html">Team</a>
         <a href="contattaci.html">Contattaci</a>
         <a href="chi-siamo.html">Chi Siamo</a>
       </nav>
 
     </main>
+    <script src="javascript/view-password.js"></script>
+    <script src="javascript/register-check.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>  
   </body>
 </html>

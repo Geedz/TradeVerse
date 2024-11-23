@@ -70,6 +70,7 @@ body {
   font-family: Poppins;
   font-size: 16px;
   box-shadow: 0 0 60px rgba(0,0,0,.4);
+  overflow: hidden;
 }
 
 .input-box {
@@ -120,7 +121,7 @@ body {
   bottom: 50px;
 }
 
-.navigation-bottom a {
+.navigation-bottom-password {
   font-size: 20px;
   font-weight: 100;
   color: #8C07DD;
@@ -128,7 +129,7 @@ body {
   user-select: none;
 }
 
-.navigation-bottom a::after {
+.navigation-bottom-password::after {
   content: "";
   position: absolute;
   left: 0;
@@ -142,7 +143,40 @@ body {
   transition: transform .3s;
 }
 
-.navigation-bottom a:hover::after {
+.navigation-bottom-password:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.navigation-bottom-register {
+  position: absolute;
+  right: 72px;
+  bottom: 50px;
+}
+
+.navigation-bottom-register {
+  font-size: 20px;
+  font-weight: 100;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+}
+
+.navigation-bottom-register::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s;
+}
+
+.navigation-bottom-register:hover::after {
   transform-origin: left;
   transform: scaleX(1);
 }
@@ -183,4 +217,31 @@ body {
 .bottom-password {
   position: absolute;
   right:0;
+}
+
+.error-message {
+  color: #fc8919;
+  font-size: 18px;
+  margin: -14px 0px 10px 10px;
+}
+
+.eye-icon {
+  color: #2f2f2f;
+  font-size: 26px;
+  position: absolute;
+  right: 100px;
+  bottom: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: transparent;
+  transition: box-shadow .15s,
+              font-size .15s,
+              right .15s,
+              bottom .15s;
+}
+
+.eye-icon:hover {
+  right: 98px;
+  bottom: 8px;
+  font-size: 30px;
 }

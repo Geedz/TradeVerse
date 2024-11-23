@@ -150,13 +150,13 @@ body {
   font-size: 30px;
 }
 
-.navigation-bottom {
+.navigation {
   position: absolute;
-  left: 62px;
+  right: 62px;
   bottom: 50px;
 }
 
-.navigation-bottom a {
+.navigation a {
   font-size: 20px;
   font-weight: 100;
   color: #8C07DD;
@@ -164,21 +164,45 @@ body {
   user-select: none;
 }
 
-.navigation-bottom a::after {
+.navigation a::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -4px;
   width: 100%;
   height: 2px;
-  background: #8C07DD;
+  background: inherit;
   border-radius: 5px;
   transform-origin: right;
   transform: scaleX(0);
   transition: transform .3s;
 }
 
-.navigation-bottom a:hover::after {
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.navigation .login-redirect {
+  color: white;
+  margin-right: 1220px;
+}
+
+.navigation .login-redirect::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: white;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s;
+}
+
+.navigation .login-redirect:hover::after {
   transform-origin: left;
   transform: scaleX(1);
 }
@@ -192,5 +216,26 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.eye-icon {
+  color: #2f2f2f;
+  font-size: 26px;
+  position: absolute;
+  right: 40px;
+  bottom: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: transparent;
+  transition: box-shadow .15s,
+              font-size .15s,
+              right .15s,
+              bottom .15s;
+}
+
+.eye-icon:hover {
+  right: 38px;
+  bottom: 8px;
+  font-size: 30px;
 }
 
