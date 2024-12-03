@@ -45,7 +45,7 @@
           <h2>
             Contattaci
           </h2>
-          <form action="form-details.txt" method="post">
+          <form id="contact-form">
             <div class="short-input-container">
               <div class="input-box-short">
                 <input id="namefield" name="namefield" class="input-field-short" 
@@ -76,7 +76,7 @@
                     minlength="20"></textarea>
               <label for="contactfield">Descrivi il motivo per contattarci...</label>
             </div>
-            <button type="submit" class="contact-submit-form">
+            <button id="submit-button" type="submit" class="contact-submit-form">
               INVIA
             </button>  
           </form>    
@@ -101,5 +101,30 @@
     </main>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+      document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();  // Prevent form from submitting the traditional way
+    
+        // Get form data
+        let formData = new FormData(document.getElementById("contact-form"));
+    
+        // Create AJAX request
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://api.tradeverse.it/php/contact.php", true);
+    
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            // Display response message
+            document.getElementById("submit-button").innerHTML = xhr.responseText;
+          } else {
+            document.getElementById("submit-button").innerHTML = "C'é stato un errore: " + xhr.status;
+          }
+        };
+        
+        // Send the request with the form data
+        xhr.send(formData);
+      });
+    </script>    
+
   </body>
 </html>
